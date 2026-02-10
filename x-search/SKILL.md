@@ -7,6 +7,19 @@ description: Search and analyze X/Twitter posts using xAI's Grok API with real-t
 
 Search X (Twitter) posts using xAI's Grok API with keyword search, semantic search, user filtering, and date range capabilities.
 
+## Instructions for Agents
+
+When invoking this skill:
+
+1. **Execute the script** using the Bash tool with appropriate parameters based on the user's request
+2. **Parse the output** which contains both the analysis and citations sections
+3. **CRITICAL**: Always include the citations in your response to the user. The script output contains a "Citations:" section with numbered X post URLs that MUST be presented to the user
+4. **Format your response** to include:
+   - The analysis/findings from Grok
+   - The complete citations list with all referenced post URLs
+
+The script will return formatted output with citations. You MUST include these citations in your response to the user.
+
 ## Quick Start
 
 Basic X search:
