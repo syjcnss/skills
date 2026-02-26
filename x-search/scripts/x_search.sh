@@ -94,7 +94,7 @@ echo "$RESPONSE" | jq -r '
   .output[-1].content[0] as $content |
 
   # Extract text
-  ($content.text // "No response text found") as $text |
+  ($content.text // "No response text found" | gsub("~"; "\\~")) as $text |
 
   # Extract unique citations and sort by title
   ($content.annotations // [] | map(select(.type == "url_citation")) |
